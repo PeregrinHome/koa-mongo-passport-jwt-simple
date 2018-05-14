@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="<%= csrf; %>">
+    <title>Document</title>
+</head>
+<body>
+REGISTRATION PAGE
+<form action="/registration" method="POST">
+    <input type="hidden" name="_csrf" value="<%= csrf %>" />
+
+    <input type="text" name="displayName" placeholder="Name"
+           <% if(old.length > 0 && old[0].displayName){%>
+           value="<%= old[0].displayName %>"
+            <% }%>
+    />
+    <% if (flash.length > 0 && flash[0].displayName) { %>
+        <p><%= flash[0].displayName.message %></p>
+    <% } %>
+
+    <input type="text" name="email" placeholder="Email"
+            <% if(old.length > 0 && old[0].email){%>
+           value="<%= old[0].email %>"
+            <% }%>
+    />
+    <% if (flash.length > 0 && flash[0].email) { %>
+        <p><%= flash[0].email.message %></p>
+    <% } %>
+
+    <input type="text" name="password" placeholder="Password"
+            <% if(old.length > 0 && old[0].password){%>
+           value="<%= old[0].password %>"
+            <% }%>
+    />
+    <% if (flash.length > 0 && flash[0].password) { %>
+        <p><%= flash[0].password.message %></p>
+    <% } %>
+
+    <button type="submit">registration</button>
+</form>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+</script>
+</body>
+</html>

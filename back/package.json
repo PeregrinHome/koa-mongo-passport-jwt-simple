@@ -1,0 +1,41 @@
+{
+  "name": "chart-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "clarify": "^2.1.0",
+    "config": "^1.30.0",
+    "dotenv": "^5.0.1",
+    "es6-promisify": "^6.0.0",
+    "fs": "0.0.1-security",
+    "fs-extra": "^5.0.0",
+    "koa": "^2.5.1",
+    "koa-better-flash": "0.0.3",
+    "koa-bodyparser": "^4.2.0",
+    "koa-convert": "^1.2.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.0",
+    "koa-passport": "^4.0.1",
+    "koa-router": "^7.4.0",
+    "lodash": "^4.17.10",
+    "mongoose": "^5.0.17",
+    "mongoose-beautiful-unique-validation": "^7.1.1",
+    "mongoose-unique-validator": "^2.0.1",
+    "mz": "^2.7.0",
+    "nodemon": "^1.17.3",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2",
+    "trace": "^3.1.0"
+  }
+}
